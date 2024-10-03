@@ -3,7 +3,7 @@ import { getRandomInt } from './utilities.js';
 const baseUrl = 'https://randomuser.me/api'
 export default class UserService {
   constructor(url) {
-    this.url = url | baseUrl;
+    this.url = url || baseUrl;
   }  
 
   /**
