@@ -9,7 +9,7 @@ export default class UserService {
   /**
    * Converts a JSON response into a user object.
    * @param {String} json The JSON response.
-   * @returns {Object} The user object.
+   * @returns {{id: String, lastName: String, firstName: String, email: String, photo: String, title: String, socialMedia: Array, followers: Array}} The user information.
    */
   #toUser(json) {
     return {
@@ -27,6 +27,7 @@ export default class UserService {
   /**
    * Randomly generate or retrieve a job title for a user.
    * @param {String} json The JSON response.
+   * @returns {String} A random title.
    */
   #getRandomTitle(json) {
     const titles = [ 
@@ -47,6 +48,7 @@ export default class UserService {
   /**
    * Randomly generated social media links.
    * @param {String} json The JSON response.
+   * @returns {Array.<{type: String, value: String}>} An array of social media data.
    */
   #getRandomSocialMedia(json) {
     return [ 
@@ -58,7 +60,7 @@ export default class UserService {
 
   /**
    * Retrieves a random user from the external endpoint.
-   * @returns {Object} The user information.
+   * @returns {{id: String, lastName: String, firstName: String, email: String, photo: String, title: String, socialMedia: Array, followers: Array}} The user information.
    */
   async get() {
     const url = `${ baseUrl }`;

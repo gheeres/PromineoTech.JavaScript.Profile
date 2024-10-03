@@ -13,6 +13,9 @@ addUserButton.addEventListener('click', async (e) => {
   }
 });
 
+/**
+ * Generic event handler to handle clicks within the profile list.
+ */
 profiles.addEventListener('click', (e) => {
   const element = e.target.closest('.profile');
   // Follow
@@ -37,6 +40,9 @@ profiles.addEventListener('click', (e) => {
   }
 });
 
+/**
+ * Custom event handler when a profile/user is followed.
+ */
 profiles.addEventListener('follow', (e) => {
   const existingUser = e.detail?.user;
   if (existingUser) {
@@ -49,6 +55,9 @@ profiles.addEventListener('follow', (e) => {
   }
 });
 
+/**
+ * Custom event handler when a profile/user is deleted.
+ */
 profiles.addEventListener('delete', (e) => {
   const element = e.detail?.element;
   if (element) {

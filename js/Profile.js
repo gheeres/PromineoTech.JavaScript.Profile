@@ -9,7 +9,7 @@
  * @param {String} user.title The title of the user.  
  * @param {Object} user.socialMedia The social media identifiers.
  * @param {Array.<String>} user.followers The count of the number of followers.  
- * @returns 
+ * @returns {HTMLElement} The HTML element to be rendered.
  */
 export default function Profile(user) {
   const template = document.createElement('template');
