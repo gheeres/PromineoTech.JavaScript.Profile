@@ -1,0 +1,7 @@
+.vscode/
+.DS_Store
+.temp/
+node_modules/
+dist/
+docs/
+*.zip

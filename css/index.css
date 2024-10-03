@@ -1,0 +1,38 @@
+body {
+  font-size: .875rem;
+}
+main {
+  background-color: #eee;
+}
+
+.profile {
+  border-radius: 15px;
+  width: 400px;
+}
+.profile > .profile-action {
+  position: absolute;
+  position: absolute;
+  top: 0.25rem;
+  right: 0.75rem;
+  z-index: 1;
+}
+.profile > .profile-action i {
+  font-size: 2em;
+}
+.profile > .profile-action i.bi-x:hover {
+  color: var(--bs-danger) !important;
+}
+
+
+.btn-floating {
+  width: 2.3125rem;
+  height: 2.3125rem;
+}
+.btn-floating, [class*=btn-outline-].btn-floating {
+  border-radius: 50%;
+  padding: 0;
+  position: relative;
+}
+.btn-rounded {
+  border-radius: 8rem;
+}
